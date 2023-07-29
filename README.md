@@ -1,0 +1,2 @@
+# logseq-gruvbox-theme
+Gruvbox theme for logseq.
