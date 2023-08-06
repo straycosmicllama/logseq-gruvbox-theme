@@ -1,0 +1,15 @@
+{
+    "name": "logseq-bonofix-gruvbox-theme",
+    "version": "0.0.0",
+    "author": "straycosmicllama",
+    "description": "Gruvbox theme for logseq.",
+    "main": "src/main.scss",
+    "scripts": {
+      "watch": "sass --watch source:css",
+      "build": "sass source/index.scss custom.css --no-source-map && npx uglifycss custom.css --output custom.css"
+    },
+    "devDependencies": {
+      "sass": "*",
+      "uglifycss": "*"
+    }
+  }
