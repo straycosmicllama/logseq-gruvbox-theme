@@ -1,0 +1,60 @@
+%sidebar-gen {
+    border-radius: var(--ls-border-radius-medium);
+    padding: 6px;
+    font-size: .875rem;
+    font-weight: 500;
+    font-family: #{$font}, monospace;
+    &:hover {
+        background-color: var(--ls-tertiary-background-color) !important;
+        color: #{$dark-light-red}
+    }
+}
+.left-sidebar-inner a.item,
+.left-sidebar-inner .nav-content-item .header,
+.left-sidebar-inner .nav-content-item .bd ul a,
+.left-sidebar-inner .create #create-button {
+    @extend %sidebar-gen;
+}
+
+.left-sidebar-inner nav,
+.left-sidebar-inner .nav-contents-container,
+.left-sidebar-inner .create {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.left-sidebar-inner .create #create-button {
+    @extend %sidebar-gen;
+    border: none;
+    background-color: #{$dark-dark-blue} !important;
+    color: #{$dark-bg0};
+    &:hover {
+        color: #{$dark-light-blue};
+    }
+}
+
+.left-sidebar-inner .create #create-button:focus,
+.left-sidebar-inner a.item.active {
+    background-color: var(--ls-tertiary-background-color) !important;
+    color: #{$dark-light-yellow};
+}
+
+.dropdown-caret {
+    border-top-color: #{$dark-fg1} !important;
+}
+
+.left-sidebar-inner .nav-content-item .header .wrap-th>span {
+    font-size: .875rem;
+    font-family: #{$font}, monospace;
+}
+
+//
+// ROUNDED SIDEBAR CORNERS
+//
+.left-sidebar-inner .create {
+    background-image: none;
+}
+.cp__sidebar-left-layout.is-open .left-sidebar-inner {
+    border-top-right-radius: var(--ls-border-radius-high);
+    border-bottom-right-radius: var(--ls-border-radius-high);
+}

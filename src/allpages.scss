@@ -1,0 +1,27 @@
+.actions {
+    &:not(.has-selected) .actions-wrap .ui__button {
+        display: none;
+    }
+    &.has-selected .actions-wrap .ui__button {
+        background-color: #{$dark-dark-blue};
+        color: #{$dark-bg0};
+        &:hover {
+            background-color: #{$dark-light-blue};
+        }
+    }
+}
+
+.cp__all_pages .actions .search-wrap .form-input {
+    padding: 9px 12px 9px 32px !important;
+    background-color: #{$dark-bg1};
+    &:focus {
+        box-shadow: 0 0 0 1px #{$dark-light-yellow};
+    }
+}
+
+.cp__all_pages_table td.name { 
+    width: 25%;
+}
+
+
+

@@ -1,0 +1,93 @@
+@use "sass:color";
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+.dark-theme,
+html[data-theme='dark'] {
+  --ls-primary-background-color: #{$dark-bg0};
+  --ls-secondary-background-color: #{$dark-bg0-hard};
+  --ls-tertiary-background-color: #{$dark-bg0-soft};
+  --ls-quaternary-background-color: #{$dark-bg1};
+  --ls-table-tr-even-background-color: var(--ls-tertiary-background-color);
+  --ls-active-primary-color: #{$dark-light-blue};
+  // --ls-active-secondary-color: #d0e8e8; // FIX ME
+  --ls-block-properties-background-color: #{$dark-bg0-hard};
+  --ls-page-properties-background-color: var(--ls-block-properties-background-color);
+  --ls-block-ref-link-text-color: #{$dark-light-green};
+  --ls-border-color: #{$dark-light-yellow};
+  // --ls-secondary-border-color: #126277;
+  // --ls-tertiary-border-color: rgba(0, 2, 0, 0.10);
+  --ls-guideline-color: #{$dark-bg4};
+  --ls-menu-hover-color: var(--ls-secondary-background-color);
+  --ls-primary-text-color: #{$dark-fg0};
+  --ls-secondary-text-color: #{$dark-fg1};
+  --ls-title-text-color: #{$dark-dark-red};
+  --ls-link-text-color: #{$dark-light-green};
+  --ls-link-text-hover-color: #{color.adjust($dark-light-green, $lightness: 10%)};
+  --ls-link-ref-text-color: #{$dark-light-orange};
+  --ls-link-ref-text-hover-color: #{color.adjust($dark-light-orange, $lightness: 10%)};
+  --ls-tag-text-color: #{$dark-light-purple};
+  --ls-tag-text-hover-color: #{color.adjust($dark-light-purple, $lightness: 10%)};
+  --ls-slide-background-color: var(--ls-primary-background-color);
+  --ls-block-bullet-border-color: #{$dark-dark-yellow};
+  --ls-block-bullet-color: #{$dark-fg2};
+  --ls-block-highlight-color: #{$dark-bg1};
+  --ls-selection-background-color: #{$dark-bg1};
+  --ls-selection-text-color: #{$dark-fg0};
+  --ls-page-checkbox-color: #{$dark-light-yellow};
+  --ls-page-checkbox-border-color: var(--ls-primary-background-color);
+  --ls-page-blockquote-color: var(--ls-secondary-text-color);
+  --ls-page-blockquote-bg-color: var(--ls-tertiary-background-color);
+  --ls-page-blockquote-border-color: var(--ls-border-color);
+  --ls-page-mark-color: #{$dark-fg0};
+  --ls-page-mark-bg-color: #{$dark-light-yellow}66;
+  --ls-page-inline-code-color: var(--ls-secondary-text-color);
+  --ls-page-inline-code-bg-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-foreground-color: #{$dark-bg3};
+  --ls-scrollbar-background-color: var(--ls-primary-background-color);
+  --bf-scrollbar-thumb-hover-color: #{$dark-bg4};
+  --ls-cloze-text-color: #{$dark-dark-orange};
+  --ls-icon-color: var(--ls-link-text-color);
+  --ls-search-icon-color: var(--ls-primary-text-color);
+  --ls-search-icon-hover-color: var(--ls-secondary-text-color);
+  --ls-a-chosen-bg: var(--ls-quaternary-background-color);
+  // --ls-pie-bg-color: #01303b;
+  // --ls-pie-fg-color: #0b5869;
+  // --ls-highlight-color-gray: var(--color-gray-900);
+  // --ls-highlight-color-red: var(--color-red-900);
+  // --ls-highlight-color-yellow: var(--color-yellow-900);
+  // --ls-highlight-color-green: var(--color-green-900);
+  // --ls-highlight-color-blue: var(--color-blue-900);
+  // --ls-highlight-color-purple: var(--color-purple-900);
+  // --ls-highlight-color-pink: var(--color-pink-900);
+  // --ls-error-text-color: var(--color-red-400);
+  // --ls-error-background-color: var(--color-red-900);
+  // --ls-warning-text-color: var(--color-yellow-400);
+  // --ls-warning-background-color: var(--color-yellow-900);
+  // --ls-success-text-color: var(--color-green-100);
+  // --ls-success-background-color: var(--color-green-900);
+    // --ls-focus-ring-color: rgba(18, 98, 119, 0.5);
+  --ls-header-button-background: var(--ls-secondary-text-color);
+  //  --color-level-1: var(--ls-secondary-background-color);
+  //  --color-level-2: var(--ls-tertiary-background-color);
+  //  --color-level-3: var(--ls-quaternary-background-color);
+  //  --color-level-4: #195d6c;
+  //  --color-level-5: #266c7d;
+  //  --color-level-6: #3a7e8e;
+}

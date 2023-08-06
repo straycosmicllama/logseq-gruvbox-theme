@@ -6,7 +6,7 @@
     "main": "src/main.scss",
     "scripts": {
       "watch": "sass --watch source:css",
-      "build": "sass source/index.scss custom.css --no-source-map && npx uglifycss custom.css --output custom.css"
+      "build": "sass src/main.scss custom.css --no-source-map && npx uglifycss custom.css --output custom.css"
     },
     "devDependencies": {
       "sass": "*",

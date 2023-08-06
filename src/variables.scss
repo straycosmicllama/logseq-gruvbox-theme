@@ -1,0 +1,27 @@
+$corner-radius: 0.375rem;
+$accent: $dark-light-yellow;
+$font: "JetBrains Mono";
+
+:root {
+    --ls-tag-text-opacity: 1;
+    --ls-tag-text-hover-opacity: var(--ls-tag-text-opacity);
+    --ls-page-text-size: 1rem;
+    --ls-page-title-size: 2rem;
+    --ls-main-content-max-width: 810px;
+    --ls-main-content-max-width-wide: 1280px;
+    --ls-font-family: #{$font};
+    --ls-scrollbar-width: 10px;
+    --ls-border-radius-low: calc(#{$corner-radius} / 2); // Embed
+    --ls-border-radius-medium: #{$corner-radius};
+    --ls-border-radius-high: calc(#{$corner-radius} * 2);
+    --ls-headbar-height: 3rem;
+    --ls-headbar-inner-top-padding: 1rem;
+    --ls-left-sidebar-width: 246px;
+    --ls-left-sidebar-sm-width: 74vw;
+    // --ls-left-sidebar-nav-btn-size: 38px; Unused
+    --ls-native-kb-height: 0px;
+    --ls-error-color: #{$dark-light-red};
+    --ls-warning-color:#{$dark-light-orange};
+    --ls-success-color: #{$dark-light-green};
+    // --ls-highlight-color-default: var(--ls-secondary-background-color); Unused
+}

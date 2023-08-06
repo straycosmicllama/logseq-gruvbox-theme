@@ -1,0 +1,235 @@
+//
+// HEADINGS
+//
+@mixin headProp( $color, $size, $height ) {
+    color: #{$color};
+    font-size: #{$size};
+    line-height: #{$height};
+    font-family: #{$font};
+    font-weight: 700;
+    border: none;
+}
+
+.title {
+    @include headProp( #{$dark-dark-yellow}, 1em, 1.2 )
+}
+
+ .ls-block,.editor-inner .uniline-block {
+    h1 {
+    @include headProp( #{$dark-dark-red}, 2em, 1.2 )
+    }
+    h2 {
+    @include headProp( #{$dark-dark-yellow}, 1.6em, 1.2 )
+    }
+    h3 {
+    @include headProp( #{$dark-dark-green}, 1.37em, 1.3 )
+    }
+    h4 {
+    @include headProp( #{$dark-dark-aqua}, 1.25em, 1.4 )
+    }
+    h5 {
+    @include headProp( #{$dark-dark-blue}, 1.12em, 1.5 )
+    }
+    h6 {
+    @include headProp( #{$dark-dark-purple}, 1.12em, 1.5 )
+    }
+}
+
+.editor-inner .uniline-block {
+    &.h1 {
+    @include headProp( #{$dark-dark-red}, 2rem, 1.2 )
+    }
+    &.h2 {
+    @include headProp( #{$dark-dark-yellow}, 1.6rem, 1.2 )
+    }
+    &.h3 {
+    @include headProp( #{$dark-dark-green}, 1.37rem, 1.3 )
+    }
+    &.h4 {
+    @include headProp( #{$dark-dark-aqua}, 1.25rem, 1.4 )
+    }
+    &.h5 {
+    @include headProp( #{$dark-dark-blue}, 1.12rem, 1.5 )
+    }
+    &.h6 {
+    @include headProp( #{$dark-dark-purple}, 1.12rem, 1.5 )
+    }
+}
+
+//
+// TAGS
+//
+a.tag {
+    background-color: var(--ls-tag-text-color);
+    color: var(--ls-primary-background-color);
+    padding: 0.1em 0.5em;
+    border-radius: var(--ls-border-radius-low);
+    margin: 0px;
+    &:hover {
+        background-color: var(--ls-tag-text-hover-color);
+        color: var(--ls-secondary-background-color);
+    }
+}
+
+//
+// EXTERNAL LINK
+//
+.external-link {
+    border-bottom: 1px dashed;
+}
+
+//
+// PAGE REFERENCE
+//
+.page-reference .bracket {
+    opacity: 1;
+}
+
+//
+// BLOCKQUOTE
+//
+blockquote {
+    border-top-right-radius: var(--ls-border-radius-low);
+    border-bottom-right-radius: var(--ls-border-radius-low);
+    border-left: 3px #{$dark-light-yellow} solid;
+    box-shadow: 0 0 0 1px #{$dark-bg0-hard};
+}
+  
+//
+// INLINE CODE
+//
+code {
+    box-shadow: 0 0 0 1px #{$dark-bg0-hard};
+}
+
+//
+// ADMONITION
+//
+.admonitionblock {
+    border-top-right-radius: var(--ls-border-radius-low);
+    border-bottom-right-radius: var(--ls-border-radius-low);
+    background-color: var(--ls-tertiary-background-color);
+    box-shadow: 0 0 0 1px #{$dark-bg0-hard};
+}
+.admonition-icon {
+    padding: 6px;
+    background-color: var(--ls-secondary-background-color);
+    border-right: 3px #{$dark-light-yellow} solid;
+}
+
+//
+// MISCELLANEOUS
+//
+pre {
+    background-color: var(--ls-tertiary-background-color);
+}
+
+//
+// HIGHLIGHT
+//
+mark {
+    padding: 1px 6px;
+}
+
+//
+// Tables
+//
+div.table-wrapper { 
+    table {
+        border-collapse: collapse;
+    } 
+    td, 
+    th {
+        border: 1px solid #{$dark-bg0};
+        font-size: inherit;
+        padding: 0.25rem;
+        text-align: center;
+    }
+    th {
+        font-weight: 700;
+        background-color: #{$dark-dark-yellow};
+        color: #{$dark-bg0};
+        border-bottom: none;
+    }
+    tr:nth-child(even){ background-color: #{$dark-bg1}; }
+    tr:nth-child(odd){ background-color: #{$dark-bg0-soft}; }
+    tr:hover { background-color: #{$dark-bg2}; }
+}
+
+//
+// CHECKBOX AND TASKS
+//
+.form-checkbox {
+    border-radius: var(--ls-border-radius-low);
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 0 0 1px #{$dark-bg0-hard};
+    top: 0;
+  }
+.marker-switch {
+    opacity: 1;
+    font-weight: 500;
+    border-radius: var(--ls-border-radius-low);
+    color: var(--ls-primary-text-color);
+    background: #{$dark-bg1};
+    padding: 0.1em 0.5em 0.1em 1.5em;
+    margin: 0.125em 0.5em 0.125em -1.7em;
+    &:hover {
+        opacity: 1;
+    }
+  }
+
+//
+// TASKS
+//
+span.todo .form-checkbox {
+  background-color: #{$dark-dark-purple};
+}
+span.todo .block-marker.TODO {
+    background-color: #{$dark-light-purple};
+    color: #{$dark-bg0};
+}
+span.doing .form-checkbox {
+  background-color: #{$dark-dark-green};
+}
+span.doing .block-marker.DOING {
+    background-color: #{$dark-light-green};
+    color: #{$dark-bg0};
+}
+
+//
+// 
+//
+.tippy-wrapper {
+    border-radius: var(--ls-border-radius-medium);
+    box-shadow: 0 0 0 1px #{$dark-bg0-hard};
+}
+
+@mixin iconTextTags( $name, $icon, $bgcolor ) {
+    a.tag[data-ref="#{$name}"]::before {
+        content: "#{$icon}";
+        font-size: 1em;
+    }
+    a.tag[data-ref="#{$name}"] {
+        background-color: #{$bgcolor};
+        color: white;
+    }
+}
+@mixin iconTags( $name, $icon, $bgcolor ) {
+    a.tag[data-ref="#{$name}"]::before {
+        background-color: #{$bgcolor};
+        color: white;
+        content: "#{$icon}";
+        visibility: visible;
+        border-radius: var(--ls-border-radius-low);
+        padding: 0.1em 0.25em;
+    }
+    a.tag[data-ref="#{$name}"] {
+        visibility: hidden;
+        white-space: nowrap;
+        width: 0;
+    }
+}
+
+@include iconTags("test", "❤", #{$dark-light-red});
+
